@@ -16,7 +16,7 @@ Plugin.create(:tigers) do
             "鉄腕強打　幾千度び 鍛えてここに　甲子園  勝利に燃ゆる　栄冠は　輝く我等ぞ　阪神タイガース　オウオウオウオウ　阪神タイガース　フレ　フレフレフレ"
           ]
     id=message.idname
-    Post.primary_service.update(:message => "@#{id} #{str.sample}",:replyto => message)
+    message.post(:message => "@#{id} #{str.sample}")
   end
 
 end
