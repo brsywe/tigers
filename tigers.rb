@@ -16,7 +16,8 @@ Plugin.create(:tigers) do
             "鉄腕強打　幾千度び 鍛えてここに　甲子園  勝利に燃ゆる　栄冠は　輝く我等ぞ　阪神タイガース　オウオウオウオウ　阪神タイガース　フレ　フレフレフレ"
           ]
     id=message.idname
-    message.post(:message => "@#{id} #{str.sample}")
+    world, = Plugin.filtering(:world_current, nil)
+    compose(world, message, :body => "@#{id} #{str.sample}")
   end
 
 end
